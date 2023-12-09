@@ -1,0 +1,679 @@
+@charset "UTF-8";
+/* _index.scss */
+/*_mixins.scss*/
+/**
+* BREAKPOINT MIXINGS
+*/
+/*------------------------------------*\
+* BREAKPOINTS
+\*------------------------------------*/
+/**
+* SMALL (XS)
+*/
+/**
+* SMALL (SM)
+*/
+/**
+* MEDIUM (MD)
+*/
+/**
+* LARGE (LG)
+*/
+/*
+.color3 { #2cb8b2 };
+.color4 { #3ddb8f };
+.color5 { #a9f04d };
+*/
+.banner {
+  background: url("../img/singerpics/imagen4.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.music,
+.concert {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.music .music_row,
+.concert .music_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.music .music_row .music_text,
+.concert .music_row .music_text {
+  text-align: left;
+  margin-left: 2rem;
+}
+.music .music_row .music_text h2,
+.concert .music_row .music_text h2 {
+  color: white;
+}
+@media (max-width: 767px) {
+  .music .music_row,
+  .concert .music_row {
+    flex-direction: column;
+  }
+}
+.music .concert_row,
+.concert .concert_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #268fbe;
+}
+.music .concert_row .concert_text,
+.concert .concert_row .concert_text {
+  text-align: right;
+  margin-right: 2rem;
+}
+.music .concert_row .concert_text h2,
+.concert .concert_row .concert_text h2 {
+  color: white;
+}
+@media (max-width: 767px) {
+  .music .concert_row,
+  .concert .concert_row {
+    flex-direction: column;
+  }
+}
+.music a,
+.concert a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: purple;
+  transition: background-color 0.3s ease;
+  width: 10rem;
+  text-align: center;
+}
+.music a:hover,
+.concert a:hover {
+  background-color: #401487;
+}
+
+.music {
+  background-color: #551bb3;
+}
+
+.concert {
+  background-color: #268fbe;
+}
+
+.music_img {
+  width: 100%;
+  max-width: 400px;
+  rotate: -10deg;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  margin: 2rem;
+}
+.music_img:hover {
+  transform: scale(1.1);
+}
+
+.concert_img {
+  width: 100%;
+  max-width: 400px;
+  rotate: 10deg;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  margin: 2rem;
+}
+.concert_img:hover {
+  transform: scale(1.1);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* _discography.scss */
+/**
+* BREAKPOINT MIXINGS
+*/
+/*------------------------------------*\
+* BREAKPOINTS
+\*------------------------------------*/
+/**
+* SMALL (XS)
+*/
+/**
+* SMALL (SM)
+*/
+/**
+* MEDIUM (MD)
+*/
+/**
+* LARGE (LG)
+*/
+.discography__latest-release h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.discography__latest-single.card {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 200rem;
+  display: flex;
+  flex-direction: row;
+}
+.discography__latest-single.card:hover {
+  transform: scale(1.05);
+}
+.discography__latest-single.card .card-img-top {
+  border-radius: 8px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+.discography__latest-single.card .card-body {
+  display: flex;
+  align-items: center;
+}
+.discography__latest-single.card .card-body .card-text {
+  text-align: left;
+  margin-left: 20px;
+}
+.discography__latest-single.card .card-title {
+  font-size: 1.5rem;
+}
+.discography__latest-single.card .card-text {
+  font-size: 1.2rem;
+}
+.discography__albums h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 1200px) {
+  .discography__albums-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.discography__albums-container .album {
+  text-align: center;
+}
+.discography__albums-container .album .img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.discography__albums-container .album .img:hover {
+  transform: scale(1.05);
+}
+.discography__albums-container .album .list-group {
+  width: 80%;
+  margin: auto;
+}
+.discography__albums-container .album .list-group-item:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+@media (min-width: 768px) {
+  .discography__albums-container .album {
+    width: 100%;
+  }
+  .discography__albums-container .album .list-group {
+    width: 100%;
+  }
+}
+.discography__singles h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.discography__singles-grid {
+  display: grid;
+  gap: 20px;
+  max-width: 200rem;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .discography__singles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .discography__singles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .discography__singles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.discography__singles-grid .single {
+  position: relative;
+}
+.discography__singles-grid .single__title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: rgba(82, 58, 52, 0.4);
+  color: white;
+  /* Posición del texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.discography__singles-grid .single__title:hover, .discography__singles-grid .single__title :focus {
+  opacity: 1;
+}
+.discography__singles-grid .single__img {
+  line-height: 0;
+  overflow: hidden;
+}
+.discography__singles-grid .single__img img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+.discography__singles-grid .single__img img:hover, .discography__singles-grid .single__img img :focus {
+  filter: blur(2px);
+}
+
+/* _contact-form.scss */
+.contact-form h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.contact-form form .mb-3 {
+  margin-bottom: 1.5rem;
+}
+.contact-form form label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.contact-form form input,
+.contact-form form select,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+}
+.contact-form form input:focus,
+.contact-form form select:focus,
+.contact-form form textarea:focus {
+  border-color: #6cb2eb;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(108, 178, 235, 0.25);
+}
+.contact-form form button {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.contact-form form .btn-container {
+  display: flex;
+  justify-content: right;
+}
+.contact-form form .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.contact-form form .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+.contact-form form .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.contact-form form .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+/* _concerts.scss */
+.concerts__next {
+  /* Estilos para la sección del próximo concierto */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.concerts__next img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.concerts__next img:hover {
+  transform: scale(1.1);
+}
+.concerts__next .next-concert-info {
+  padding: 20px;
+  text-align: center;
+}
+.concerts__next .next-concert-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.concerts__next .next-concert-info p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.concerts__next .next-concert-info button {
+  font-size: 1.2rem;
+}
+.concerts__upcoming {
+  /* Estilos para la sección de próximos conciertos */
+}
+.concerts__upcoming h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.concerts__upcoming .upcoming-grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .concerts__upcoming .upcoming-grid {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+}
+@media (min-width: 992px) {
+  .concerts__upcoming .upcoming-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .concerts__upcoming .upcoming-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.concerts__upcoming .upcoming-grid .upcoming-card {
+  /* Estilos para cada card de próximos conciertos */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.concerts__upcoming .upcoming-grid .upcoming-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.concerts__upcoming .upcoming-grid .upcoming-card img {
+  max-width: 100%;
+  height: 15rem;
+  border-radius: 8px;
+}
+.concerts__upcoming .upcoming-grid .upcoming-card .card-body {
+  padding: 1rem;
+}
+.concerts__upcoming .upcoming-grid .upcoming-card .card-body h5 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.concerts__upcoming .upcoming-grid .upcoming-card .card-body p {
+  font-size: 1rem;
+}
+.concerts__upcoming .upcoming-grid .upcoming-card .card-body button {
+  font-size: 1rem;
+}
+.concerts__past {
+  /* Estilos para la sección de conciertos pasados */
+}
+.concerts__past h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.concerts__past .row {
+  display: flex;
+  flex-direction: column;
+}
+.concerts__past .row .card {
+  /* Estilos para cada card de conciertos pasados */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.concerts__past .row .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.concerts__past .row .card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.concerts__past .row .card .card-body {
+  padding: 1rem;
+}
+.concerts__past .row .card .card-body h5 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.concerts__past .row .card .card-body p {
+  font-size: 1rem;
+}
+
+/* _gallery.scss */
+.gallery__carousel-section {
+  /* Estilos para la sección del carrusel */
+  margin-bottom: 20px; /* Agrega un espacio de 20px hacia abajo */
+}
+.gallery__carousel-section .carousel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.gallery__carousel-section .carousel .carousel-inner .carousel-item img {
+  width: auto;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.gallery__carousel-section .carousel .carousel-control-prev,
+.gallery__carousel-section .carousel .carousel-control-next {
+  width: 5%;
+  color: white;
+}
+.gallery__image-grid-section {
+  /* Estilos para la sección del grid de imágenes */
+  margin-top: 20px; /* Agrega un espacio de 20px hacia arriba */
+}
+.gallery__image-grid-section .image-grid {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .gallery__image-grid-section .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .gallery__image-grid-section .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .gallery__image-grid-section .image-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.gallery__image-grid-section .image-grid .grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.gallery__image-grid-section .image-grid .grid-item img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery__image-grid-section .image-grid .grid-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery__image-grid-section .image-grid .grid-item .overlay p {
+  color: #fff;
+  font-weight: bold;
+}
+.gallery__image-grid-section .image-grid .grid-item:hover img {
+  transform: scale(1.1);
+}
+.gallery__image-grid-section .image-grid .grid-item:hover .overlay {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .gallery s .gallery__carousel-section {
+    margin-bottom: 10px;
+  }
+  .gallery .gallery__image-grid-section {
+    margin-top: 10px;
+  }
+  .gallery .carousel .carousel-control-prev,
+  .gallery .carousel .carousel-control-next {
+    width: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .gallery .gallery__carousel-section {
+    margin-bottom: 30px;
+  }
+  .gallery .gallery__image-grid-section {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery .gallery__carousel-section {
+    margin-bottom: 40px;
+  }
+  .gallery .gallery__image-grid-section {
+    margin-top: 40px;
+  }
+}
+
+/**
+* BREAKPOINT MIXINGS
+*/
+/*------------------------------------*\
+* BREAKPOINTS
+\*------------------------------------*/
+/**
+* SMALL (XS)
+*/
+/**
+* SMALL (SM)
+*/
+/**
+* MEDIUM (MD)
+*/
+/**
+* LARGE (LG)
+*/
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .footer__content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.footer__content-icons {
+  display: flex;
+  gap: 20px;
+}
+.footer__content-icons a img {
+  width: 30px;
+  height: 30px;
+}
+.footer__content-text p {
+  margin: 0;
+}
+
+header {
+  background-color: #333;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+.navbar .navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+}
+.navbar .navbar-nav .nav-item a {
+  color: white;
+  padding: 0.5rem 1rem;
+}
+.navbar .navbar-nav .nav-item a:hover {
+  color: gray;
+}
+
+/*# sourceMappingURL=style.css.map */
