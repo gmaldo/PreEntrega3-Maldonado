@@ -1,0 +1,129 @@
+/* _index.scss */
+
+@import '../partials/_mixins'; 
+@import '../partials/_sizes';
+$color-primary: #551bb3;
+$color-secondary: #268fbe;
+
+/*
+.color3 { #2cb8b2 };
+.color4 { #3ddb8f };
+.color5 { #a9f04d };
+*/
+
+.banner {
+    @include banner2('../img/singerpics/imagen4.jpg');
+}
+
+.row_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.music,
+.concert {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 20px; // Ajusta el espaciado según tus necesidades
+
+    // Centrar contenido dentro de las secciones
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    // Centrar filas dentro de las secciones
+    .music_row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .music_text{
+            text-align: left;
+            margin-left: 2rem;
+            h2{
+                color: white;
+            }
+        }
+        @include xs{
+            flex-direction: column;
+        }
+
+    }
+    .concert_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-secondary;
+        .concert_text{
+            text-align: right;
+            margin-right:  2rem;
+            h2{
+                color: white;
+            }
+        }
+        @include xs{
+            flex-direction: column;
+        }
+    }
+        // Estilizar enlaces como botones redondos
+    a {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 50px; // Ajusta según sea necesario para que sea completamente redondo
+        text-decoration: none;
+        font-weight: bold;
+        color: white; // Color del texto
+        background-color: purple; // Color de fondo predeterminado
+        transition: background-color 0.3s ease;
+        width: 10rem;
+        text-align: center;
+        &:hover {
+            background-color: darken($color-primary, 10%); // Cambia a tu preferencia
+        }
+    }
+ }
+
+.music{
+    background-color: $color-primary;
+}
+.concert{
+    background-color: $color-secondary;
+}
+// Imágenes dentro de Music y Concert
+.music_img{
+    width: 100%;
+    max-width: 400px; // 
+    rotate: -10deg;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 8px; // redondeada
+    margin: 2rem;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.concert_img {
+    width: 100%;
+    max-width: 400px; // 
+    rotate: 10deg;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 8px; // redondeada
+    margin: 2rem;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+// Imágenes en general
+img {
+    width: 100%;
+    height: auto;
+}

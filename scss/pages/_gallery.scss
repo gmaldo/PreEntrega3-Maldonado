@@ -1,0 +1,135 @@
+/* _gallery.scss */
+
+.gallery {
+    &__carousel-section {
+      /* Estilos para la sección del carrusel */
+      margin-bottom: 20px; /* Agrega un espacio de 20px hacia abajo */
+      
+      .carousel {
+        width: 100%;
+        height: 100vh; // Ocupa toda la altura de la ventana
+        overflow: hidden;
+        margin: 0;
+  
+        .carousel-inner {
+          .carousel-item {
+            img {
+              width: auto;
+              height: 100vh; // Ocupa toda la altura de la ventana
+              object-fit: cover; 
+              border-radius: 8px;
+            }
+          }
+        }
+  
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 5%;
+          color: white; 
+        }
+      }
+    }
+  
+    &__image-grid-section {
+      /* Estilos para la sección del grid de imágenes */
+      margin-top: 20px; /* Agrega un espacio de 20px hacia arriba */
+      
+      .image-grid {
+        display: grid;
+        gap: 20px;
+        
+        @include sm {
+          grid-template-columns: 1fr; // En pantallas pequeñas, una columna
+        }
+        
+        @include md {
+          grid-template-columns: repeat(3, 1fr); // En pantallas medianas, 3 columnas
+        }
+        
+        @include lg {
+          grid-template-columns: repeat(5, 1fr); // En pantallas grandes, 5 columnas
+        }
+  
+        .grid-item {
+          position: relative;
+          overflow: hidden;
+          border-radius: 8px; //redondeado
+  
+          img {
+            max-width: 100%;
+            height: 100%; //auto
+            display: block;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+          }
+  
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); // un gris traslucido
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+  
+            p {
+              color: #fff; 
+              font-weight: bold;
+            }
+          }
+  
+          &:hover {
+            img {
+              transform: scale(1.1); // Ajusta el valor según tu preferencia
+            }
+  
+            .overlay {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    
+    @include sm {
+s      .gallery__carousel-section {
+        margin-bottom: 10px;
+      }
+      
+      .gallery__image-grid-section {
+        margin-top: 10px;
+      }
+      
+      .carousel {
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 10%;
+        }
+      }
+    }
+    
+    @include md {
+      .gallery__carousel-section {
+        margin-bottom: 30px;
+      }
+      
+      .gallery__image-grid-section {
+        margin-top: 30px;
+      }
+    }
+    
+    @include lg {
+      .gallery__carousel-section {
+        margin-bottom: 40px;
+      }
+      
+      .gallery__image-grid-section {
+        margin-top: 40px;
+      }
+    }
+  }

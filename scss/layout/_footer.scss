@@ -1,0 +1,38 @@
+// _footer.scss
+@import '../partials/sizes';
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 50px;
+  
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      @include xs {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  
+    &__content-icons {
+      display: flex;
+      gap: 20px;
+  
+      a {
+        img {
+          width: 30px; // Ajusta el tamaño según tus necesidades
+          height: 30px;
+        }
+      }
+    }
+  
+    &__content-text {
+      p {
+        margin: 0;
+      }
+    }
+  }

@@ -1,0 +1,29 @@
+// _header.scss
+
+header {
+    background-color: #333;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  
+    .navbar-brand {
+      color: white;
+      font-size: 1.5rem;
+    }
+  
+    //no la hago responsive con media queries porque boostrap ya lo hace
+
+    .navbar-nav {
+      .nav-item {
+        a {
+          color: white;
+          padding: 0.5rem 1rem;
+  
+          &:hover {
+            color: gray;
+          }
+        }
+      }
+    }
+  }

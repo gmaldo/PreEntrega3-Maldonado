@@ -1,0 +1,21 @@
+/*_mixins.scss*/
+@mixin banner($imgBanner) {
+    height: 100vh;
+    background: url($imgBanner) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@mixin banner2($url_imagen){
+    background: url($url_imagen) center/cover no-repeat; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
